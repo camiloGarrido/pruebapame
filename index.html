@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>titulo</title>
+    <style>
+      .miClase {
+        height: 50;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hola mundo</h1>
+    <div id="parrafo1" class="miClase">
+      <button type="button" onclick="agregarEntradas()">
+        agregar entradas
+      </button>
+      <button type="button" onclick="reset()">eliminarEntradas</button>
+    </div>
+    <div id="parrafo2" class="miClase">0</div>
+    <div id="parrafo3" class="miClase">
+      <h6>Total</h6>
+      <h5 id="total">0</h5>
+    </div>
+    <div class="miClase"></div>
+    <script>
+      var valorEntrada = 2000;
+      var entradas = 0;
+      function agregarEntradas() {
+        entradas++;
+        document.getElementById("parrafo2").innerHTML = entradas;
+        document.getElementById("total").innerHTML = entradas * valorEntrada;
+      }
+
+      function reset() {
+        entradas = 0;
+        document.getElementById("parrafo2").innerHTML = 0;
+        document.getElementById("total").innerHTML = 0;
+      }
+    </script>
+  </body>
+</html>
